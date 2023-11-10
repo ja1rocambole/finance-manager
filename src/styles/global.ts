@@ -92,7 +92,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  /* font: inherit; */
+  font-family: 'Nunito', sans-serif;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -132,6 +133,14 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+
+.container {
+  padding: 0.6rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 `;
