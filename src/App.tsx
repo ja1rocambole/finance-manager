@@ -1,9 +1,11 @@
+import { StyledCardTransition } from "./Components/CardTransition/style";
+import { Header } from "./Components/Header";
+
 function App() {
   return (
     <>
-      CONTAINER
+      <Header />
       <div className="container">
-        <header>HEADER</header>
         <main>
           <div>
             <form>FORMULARIO</form>
@@ -13,9 +15,12 @@ function App() {
           <div>
             <ul>
               FINANCE LIST
-              <li>FINANCE CARD</li>
-              <li>FINANCE CARD</li>
-              <li>FINANCE CARD</li>
+              <StyledCardTransition
+                description="descrição"
+                type="outflow"
+                uuid="isso é um uuid"
+                value="R$ 3.300,00"
+              />
             </ul>
           </div>
         </main>

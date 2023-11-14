@@ -3,16 +3,33 @@ import { Button } from ".";
 
 interface IStyledButton {
   sizeFull?: boolean;
+  color: "primary" | "grey";
 }
 
 export const StyledButton = styled(Button)<IStyledButton>`
   font-weight: 400;
   font-size: 1rem;
-  color: ${({ theme }) => theme.colors.greyOne};
-  background-color: ${({ theme }) => theme.colors.primary};
   padding: 13px 20px;
-  border: 2px solid ${({ theme }) => theme.colors.primary};
   border-radius: 8px;
+
+  ${({ color }) => {
+    switch (color) {
+      case "primary":
+        return css`
+          border: 2px solid ${({ theme }) => theme.colors.primary};
+          background-color: ${({ theme }) => theme.colors.primary};
+          color: ${({ theme }) => theme.colors.greyOne};
+        `;
+      case "grey":
+        return css`
+          border: 2px solid ${({ theme }) => theme.colors.greyTwo};
+          background-color: ${({ theme }) => theme.colors.greyTwo};
+          color: ${({ theme }) => theme.colors.greyFour};
+        `;
+      default:
+        break;
+    }
+  }}
 
   ${({ sizeFull }) =>
     sizeFull &&
