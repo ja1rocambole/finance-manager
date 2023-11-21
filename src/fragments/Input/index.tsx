@@ -7,7 +7,14 @@ interface IInputProps {
   labelText?: string;
   placeHolder?: string;
   errors?: FieldError;
-  type: undefined | "email" | "password" | "text" | "checkbox" | "radio";
+  type:
+    | undefined
+    | "email"
+    | "password"
+    | "text"
+    | "number"
+    | "checkbox"
+    | "radio";
   register?: UseFormRegisterReturn<string>;
   value?: string;
   defaultValue?: string;

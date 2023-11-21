@@ -1,10 +1,6 @@
 import styled, { css } from "styled-components";
 import { CardTrasition } from ".";
 
-// interface IStyledCardTransition {
-//   type: "inflow" | "outflow";
-// }
-
 export const StyledCardTransition = styled(CardTrasition)`
   ${({ type }) => {
     switch (type) {
@@ -23,7 +19,10 @@ export const StyledCardTransition = styled(CardTrasition)`
   }}
 
   & {
-    padding: 8px 12px;
+    width: 100%;
+
+    max-width: 355px;
+    padding: 14px 12px;
     box-sizing: border-box;
     background: ${({ theme }) => theme.colors.greyOne};
     position: relative;
@@ -31,6 +30,10 @@ export const StyledCardTransition = styled(CardTrasition)`
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 32px -12px rgba(0, 0, 0, 0.25);
   }
 
   & > div:nth-of-type(1) {
@@ -62,5 +65,21 @@ export const StyledCardTransition = styled(CardTrasition)`
     align-items: center;
     justify-content: center;
     font-size: 10px;
+  }
+
+  @media screen and (min-width: 500px) {
+    & {
+      max-width: none;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & > div:nth-child(2) {
+      margin-bottom: 18px;
+    }
+    & > div:nth-child(3) {
+      justify-content: flex-end;
+      gap: 5px;
+    }
   }
 `;

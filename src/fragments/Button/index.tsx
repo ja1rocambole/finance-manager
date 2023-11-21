@@ -4,11 +4,12 @@ interface IButton {
   className?: string;
   onClick?: () => void;
   children: React.ReactNode;
+  type: "submit" | "reset" | "button";
 }
 
-export const Button = ({ className, onClick, children }: IButton) => {
+export const Button = ({ className, onClick, children, type }: IButton) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button type={type} className={className} onClick={onClick}>
       {children}
     </button>
   );

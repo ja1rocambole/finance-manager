@@ -135,6 +135,14 @@ table {
   border-spacing: 0;
 }
 
+button{ cursor: pointer;}
+
+@media screen and (min-width: 500px) {
+  main{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .container {
   padding: 0.6rem;
@@ -142,5 +150,7 @@ table {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+
 
 `;

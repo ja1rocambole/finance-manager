@@ -4,7 +4,7 @@ export const lightTheme = {
     primaryTwo: "#E34981",
     secondary: "#03B898",
     greyFour: "#212529",
-    greyThree: "##868E96",
+    greyThree: "#868E96",
     greyTwo: "#E9ECEF",
     greyOne: "#F8F9FA",
   },

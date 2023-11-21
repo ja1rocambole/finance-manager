@@ -1,5 +1,10 @@
 import { StyledCardTransition } from "./Components/CardTransition/style";
+import { ContainerLeft } from "./Components/ContainerLeft";
+import { ContainerRight } from "./Components/ContainerRight";
+import { FormInsertTrasition } from "./Components/FormInsertTransition";
 import { Header } from "./Components/Header";
+import { TotalValues } from "./Components/TotalValues";
+import { StyledTitle } from "./fragments/Title/style";
 
 function App() {
   return (
@@ -7,22 +12,9 @@ function App() {
       <Header />
       <div className="container">
         <main>
-          <div>
-            <form>FORMULARIO</form>
-            <div>TOTAL</div>
-          </div>
+          <ContainerLeft />
 
-          <div>
-            <ul>
-              FINANCE LIST
-              <StyledCardTransition
-                description="descrição"
-                type="outflow"
-                uuid="isso é um uuid"
-                value="R$ 3.300,00"
-              />
-            </ul>
-          </div>
+          <ContainerRight />
         </main>
       </div>
     </>
